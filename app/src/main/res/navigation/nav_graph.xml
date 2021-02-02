@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/newsFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.News.NewsFragment"
+              android:label="@string/news_title"/>
+
+    <fragment android:id="@+id/contactUsFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.ContactUs.ContactUsFragment"
+              android:label="@string/contactus_title"/>
+    <fragment android:id="@+id/aboutClubFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.AboutClub.AboutClubFragment"
+              android:label="@string/About_club"/>
+    <fragment android:id="@+id/matchesFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.Matches.MatchesFragment"
+              android:label="@string/matches"/>
+    <fragment android:id="@+id/calendarFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.Calendar.CalendarFragment"
+              android:label="@string/Calendar"/>
+    <!--<fragment android:id="@+id/resultsFragment"-->
+              <!--android:name="com.dev.mahmoud_ashraf.al_ahlysportsclub.Results.ResultsFragment"-->
+              <!--android:label="@string/results"/>-->
+    <fragment android:id="@+id/othersGamesFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.OthersGames.OthersGamesFragment"
+              android:label="@string/team">
+        <action android:id="@+id/action_othersGamesFragment_to_footballTeamFragment"
+                app:destination="@id/footballTeamFragment"/>
+    </fragment>
+    <fragment android:id="@+id/championshipsFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.Championships.ChampionshipsFragment"
+              android:label="@string/championship"/>
+    <fragment android:id="@+id/footballTeamFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.FootballTeam.FootballTeamFragment"
+              android:label="@string/football_team"/>
+    <fragment android:id="@+id/audienceFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.Audience.AudienceFragment"
+              android:label="@string/audience"/>
+    <fragment android:id="@+id/myProfileFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.MyProfile.MyProfileFragment"
+              android:label="@string/my_profile"/>
+
+    <fragment android:id="@+id/homeFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.Homesnap.HomeSnapFragment"
+              android:label="@string/hmoe_ditem"/>
+    <fragment android:id="@+id/logOutFragment"
+              android:name="com.dev.alahlifc.al_ahlysportsclub.LogOut.LogOutFragment"
+              android:label="@string/logout"
+             />
+</navigation>

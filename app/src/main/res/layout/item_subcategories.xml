@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="subCategoriesData"
+                  type="com.dev.alahlifc.al_ahlysportsclub.models.mProductCategories.Subcategory" />
+    </data>
+<androidx.cardview.widget.CardView
+        android:foreground="?selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="246dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp"
+>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+
+
+        android:orientation="vertical">
+
+
+  <!--  srcNormalproduct-->
+
+    <ImageView
+            app:srcNormalproduct="@{subCategoriesData.image}"
+            android:background="#33999999"
+            android:id="@+id/categoryIv"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    <View android:layout_width="0dp"
+          android:layout_height="0dp"
+
+          app:layout_constraintEnd_toEndOf="@+id/categoryIv"
+          app:layout_constraintStart_toStartOf="@+id/categoryIv"
+          app:layout_constraintBottom_toBottomOf="@+id/categoryIv"
+          app:layout_constraintTop_toTopOf="@+id/categoryIv"
+          android:id="@+id/view7"/>
+
+
+    <TextView
+            android:text="@{subCategoriesData.name}"
+            android:gravity="center"
+            android:background="@color/colorBlackLightTransparent"
+            tools:text="T-shirts"
+            android:id="@+id/categoryTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view7"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content">
+
+        <TextView android:layout_width="match_parent"
+                  tools:text="اللاعب الأفضل لهذا الأسبوع"
+                  android:gravity="center"
+                  android:id="@+id/question_tv"
+                  android:textColor="@color/colorAccent"
+                  android:textSize="17sp"
+               android:layout_marginTop="16dp"
+                  android:layout_marginBottom="16dp"
+                  android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                tools:context=".Championships.ChampionshipsFragment"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:id="@+id/audienceRv"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_8sdp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="match_parent"
+
+                tools:listitem="@layout/item_audience"
+        />
+
+    </LinearLayout>
+</layout>

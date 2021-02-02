@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            tools:context=".Championships.ChampionshipsFragment"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:spanCount="2"
+            android:id="@+id/championsRv"
+            android:layout_width="match_parent"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:nestedScrollingEnabled="false"
+            android:layout_height="match_parent"
+
+            tools:listitem="@layout/item_champions"
+    />
+</layout>

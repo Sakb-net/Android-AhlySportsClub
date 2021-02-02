@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="java.lang.Double" />
+        <variable name="footballData"
+                  type="com.dev.alahlifc.al_ahlysportsclub.models.mFootballTeam.Coache" />
+    </data>
+<androidx.cardview.widget.CardView
+        android:foreground="?selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp"
+>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+    <ImageView
+            android:background="#33999999"
+            app:srcCustomImage="@{footballData.userImage}"
+            android:id="@+id/categoryIv"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+   <!-- <View android:layout_width="0dp"
+          android:layout_height="200dp"
+          android:background="@color/colorBlackTransparent"
+          app:layout_constraintEnd_toEndOf="@+id/categoryIv"
+          app:layout_constraintStart_toStartOf="@+id/categoryIv"
+          app:layout_constraintBottom_toBottomOf="@+id/categoryIv"
+          app:layout_constraintTop_toTopOf="@+id/categoryIv"
+          android:id="@+id/view7"/>-->
+
+
+    <TextView android:layout_width="wrap_content"
+              tools:text="12"
+              android:text="@{footballData.numSport}"
+              android:padding="8dp"
+              android:background="@color/colorPrimary"
+              android:textColor="@color/white"
+              android:id="@+id/player_num"
+              android:textSize="16sp"
+              android:layout_height="wrap_content"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/categoryIv"/>
+
+    <TextView
+            android:maxLines="1"
+            android:text="@{footballData.name}"
+            android:gravity="center"
+            tools:text="T-shirts000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            android:id="@+id/categoryTitle"
+            android:layout_width="wrap_content"
+            app:layout_constrainedWidth="true"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:textColor="#1D1D1D"
+            android:textSize="16sp"
+
+            app:layout_constraintTop_toBottomOf="@+id/categoryIv"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/player_num"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>

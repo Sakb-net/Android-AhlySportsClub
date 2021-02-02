@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.core.widget.NestedScrollView
+
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    <LinearLayout
+            android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="14dp">
+
+
+        <TableLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+
+                     android:paddingLeft="10dp"
+                     android:paddingRight="10dp" >
+
+            <TableRow
+                      android:padding="5dp">
+                <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                     />
+                <TextView
+                        android:textStyle="bold"
+                        android:fontFamily="@font/helvetica_reg"
+                        android:id="@+id/first_team"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="Team1" />
+                <TextView
+                        android:textStyle="bold"
+                        android:fontFamily="@font/helvetica_reg"
+                        android:id="@+id/second_team"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="Team2" />
+            </TableRow>
+            <View
+                  android:layout_width="match_parent"
+                  android:background="#EBEBEB"
+                  android:layout_height="1dp"/>
+            <TableRow
+                      android:padding="5dp">
+                <TextView
+                        android:fontFamily="@font/helvetica_reg"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/goals" />
+                <TextView
+                        android:id="@+id/t1_goal"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="2" />
+                <TextView
+                        android:id="@+id/t2_goal"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        tools:text="5" />
+            </TableRow>
+            <View
+                    android:layout_width="match_parent"
+                    android:background="#EBEBEB"
+                    android:layout_height="1dp"/>
+            <TableRow android:padding="5dp">
+                <TextView
+                        android:fontFamily="@font/helvetica_reg"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/corner_strokes" />
+                <TextView
+                        android:id="@+id/t1_corner"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="2" />
+                <TextView
+                        android:id="@+id/t2_corner"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        tools:text="5" />
+            </TableRow>
+            <View
+                    android:layout_width="match_parent"
+                    android:background="#EBEBEB"
+                    android:layout_height="1dp"/>
+            <TableRow  android:padding="5dp">
+                <TextView
+                        android:fontFamily="@font/helvetica_reg"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/offside" />
+                <TextView
+                        android:id="@+id/t1_offside"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="2" />
+                <TextView
+                        android:id="@+id/t2_offside"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        tools:text="5" />
+            </TableRow>
+            <View
+                    android:layout_width="match_parent"
+                    android:background="#EBEBEB"
+                    android:layout_height="1dp"/>
+            <TableRow  android:padding="5dp">
+                <TextView
+                        android:fontFamily="@font/helvetica_reg"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/yellow_cards" />
+                <TextView
+                        android:id="@+id/t1_yellow"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="2" />
+                <TextView
+                        android:id="@+id/t2_yellow"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        tools:text="5" />
+            </TableRow>
+            <View
+                    android:layout_width="match_parent"
+                    android:background="#EBEBEB"
+                    android:layout_height="1dp"/>
+            <TableRow  android:padding="5dp">
+                <TextView
+                        android:fontFamily="@font/helvetica_reg"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/red_cards" />
+                <TextView
+                        android:id="@+id/t1_red"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="2" />
+                <TextView
+                        android:id="@+id/t2_red"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        tools:text="5" />
+            </TableRow>
+            <View
+                    android:layout_width="match_parent"
+                    android:background="#EBEBEB"
+                    android:layout_height="1dp"/>
+            <TableRow android:padding="5dp">
+                <TextView
+                        android:fontFamily="@font/helvetica_reg"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/shooting_on_goal" />
+                <TextView
+                        android:id="@+id/t1_shoot"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="2" />
+                <TextView
+                        android:id="@+id/t2_shoot"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="5" />
+            </TableRow>
+            <View
+                    android:layout_width="match_parent"
+                    android:background="#EBEBEB"
+                    android:layout_height="1dp"/>
+            <TableRow android:padding="5dp">
+                <TextView
+                        android:fontFamily="@font/helvetica_reg"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/passes" />
+                <TextView
+                        android:id="@+id/t1_passes"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        tools:text="2" />
+                <TextView
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/t2_passes"
+                        tools:text="5" />
+            </TableRow>
+        </TableLayout>
+
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--app:cardBackgroundColor="#aaa"-->
+            <!--app:cardCornerRadius="4dp"-->
+            <!--app:cardElevation="3dp" />-->
+
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--app:cardBackgroundColor="#aaa"-->
+            <!--app:cardCornerRadius="4dp"-->
+            <!--app:cardElevation="3dp" />-->
+
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--app:cardBackgroundColor="#aaa"-->
+            <!--app:cardCornerRadius="4dp"-->
+            <!--app:cardElevation="3dp" />-->
+
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--app:cardBackgroundColor="#aaa"-->
+            <!--app:cardCornerRadius="4dp"-->
+            <!--app:cardElevation="3dp" />-->
+
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--app:cardBackgroundColor="#aaa"-->
+            <!--app:cardCornerRadius="4dp"-->
+            <!--app:cardElevation="3dp" />-->
+
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--app:cardBackgroundColor="#aaa"-->
+            <!--app:cardCornerRadius="4dp"-->
+            <!--app:cardElevation="3dp" />-->
+
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--app:cardBackgroundColor="#aaa"-->
+            <!--app:cardCornerRadius="4dp"-->
+            <!--app:cardElevation="3dp" />-->
+
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--app:cardBackgroundColor="#aaa"-->
+            <!--app:cardCornerRadius="4dp"-->
+            <!--app:cardElevation="3dp" />-->
+
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--app:cardBackgroundColor="#aaa"-->
+            <!--app:cardCornerRadius="4dp"-->
+            <!--app:cardElevation="3dp" />-->
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</layout>

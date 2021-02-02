@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/white"-->
+           <!--&gt;-->
+    <!---->
+
+    <!--    <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardCornerRadius="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/card_sort"
+                android:elevation="0dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+        >
+            <LinearLayout
+                    android:id="@+id/headerll"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/rec_strok_gray_light_rounded_football"
+                 android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="6dp"
+
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/categoryPlayer"
+                        android:layout_width="wrap_content"
+                        tools:text="@string/cat_player"
+                        android:maxLines="1"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#616161"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_weight="1"
+                      android:layout_height="0dp"/>
+                <ImageView
+                        android:id="@+id/sortby_btn"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <Spinner
+
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:visibility="invisible"
+                    android:gravity="center"
+                    android:spinnerMode="dialog"
+
+
+            />
+
+
+        </androidx.cardview.widget.CardView>-->
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                android:id="@+id/footballRv"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_8sdp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_footballplayer"
+        />
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+</layout>

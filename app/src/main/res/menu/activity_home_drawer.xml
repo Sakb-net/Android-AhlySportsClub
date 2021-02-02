@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+                android:id="@+id/homeFragment"
+                android:title="@string/hmoe_ditem"/>
+        <item
+                android:id="@+id/aboutClubFragment"
+                android:title="@string/About_club"/>
+        <item
+                android:id="@+id/newsFragment"
+                android:title="@string/news_title"/>
+
+
+     <!--   <item
+                android:id="@+id/footballTeamFragment"
+                android:title="@string/football_team"/>-->
+        <item
+                android:id="@+id/othersGamesFragment"
+                android:title="@string/team"/>
+        <item
+                android:id="@+id/matchesFragment"
+                android:title="@string/matches"/>
+
+      <!--  <item
+                android:id="@+id/resultsFragment"
+                android:title="@string/results"/>-->
+        <item
+                android:id="@+id/calendarFragment"
+                android:title="@string/Calendar"/>
+        <item
+                android:id="@+id/championshipsFragment"
+                android:title="@string/championship"/>
+
+        <item
+                android:id="@+id/audienceFragment"
+                android:title="@string/audience"/>
+
+        <item
+                android:id="@+id/myProfileFragment"
+                android:title="@string/my_profile"/>
+
+       <!-- <item
+                android:id="@+id/homeefffeee"
+                android:title="@string/plot_game"/>-->
+
+        <item
+                android:id="@+id/contactUsFragment"
+                android:title="@string/contactus_title"/>
+        <item
+                android:id="@+id/logOutFragment"
+                android:title="@string/logout"/>
+
+
+
+
+    </group>
+
+
+
+
+</menu>

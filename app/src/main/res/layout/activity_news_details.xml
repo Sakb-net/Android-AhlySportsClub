@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="newsData"
+                  type="com.dev.alahlifc.al_ahlysportsclub.models.mNews.Data" />
+    </data>
+
+
+      <LinearLayout android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+          <androidx.appcompat.widget.Toolbar
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:id="@+id/toolbar"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:minHeight="?attr/actionBarSize"
+                  android:background="?attr/colorPrimary"
+                  app:contentInsetStartWithNavigation="0dp"
+                  app:titleTextColor="@color/white"
+                  app:popupTheme="@style/AppTheme.PopupOverlay"
+          >
+
+
+              <TextView
+                      style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                      android:id="@+id/toolbarTitle"
+                      android:layout_gravity="center"
+                      android:textStyle="bold"
+                      android:text="@string/det"
+                      android:textColor="@color/white"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>
+
+
+
+          </androidx.appcompat.widget.Toolbar>
+
+
+
+
+              <androidx.core.widget.NestedScrollView
+                      android:fillViewport="true"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+
+                  <LinearLayout android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_height="match_parent">
+
+                      <LinearLayout android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content">
+                          <androidx.cardview.widget.CardView
+                                  android:layout_width="match_parent"
+                                  android:layout_margin="@dimen/_8sdp"
+                                  android:layout_height="wrap_content"
+                                  app:cardCornerRadius="6dp"
+
+                                  app:cardElevation="2dp"
+                          >
+
+                              <LinearLayout
+                                      android:orientation="vertical"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                              >
+
+                                  <ImageView
+                                          app:srcVideoImage="@{newsData.image}"
+                                          android:id="@+id/newsIv"
+                                          tools:src="#BCBCBC"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="157dp"
+                                          android:scaleType="centerCrop"
+                                  />
+
+                                  <TextView
+                                          android:fontFamily="@font/helvetica_reg"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          tools:text="منذ 2 أسبوع"
+                                          android:text="@{newsData.createdAt}"
+                                          app:layout_constrainedWidth="true"
+                                          android:textSize="12sp"
+                                          android:gravity="start|center"
+                                          android:layout_gravity="start|center"
+                                          android:textColor="#818181"
+                                          android:background="@drawable/rec_strok_gray_light_rounded"
+                                          android:layout_marginStart="8dp"
+                                          app:layout_constraintStart_toStartOf="parent"
+                                          android:layout_marginTop="20dp"
+
+                                          android:id="@+id/createdAtTv"
+                                          android:layout_marginEnd="8dp"
+                                  />
+
+                                  <TextView
+                                          android:fontFamily="@font/helvetica_reg"
+                                          android:layout_width="match_parent"
+                                          android:textSize="15sp"
+                                          android:textStyle="bold"
+                                          android:textColor="#144E30"
+                                          android:text="@{newsData.name}"
+                                          tools:text="مجلس إدارة النادي الأهلي يعقد اجتماعه الأول"
+                                          android:layout_height="wrap_content"
+                                          android:layout_marginStart="8dp"
+                                          android:layout_marginTop="8dp"
+                                          android:id="@+id/name"
+                                          android:layout_marginEnd="8dp"/>
+
+                                  <TextView
+                                          android:fontFamily="@font/helvetica_reg"
+                                          android:id="@+id/content"
+                                          android:layout_width="match_parent"
+                                          android:textSize="14sp"
+                                          android:ellipsize="end"
+                                          android:text="@{newsData.description}"
+                                          android:lineSpacingExtra="4sp"
+                                          android:textColor="#707070"
+                                          tools:text="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق"
+                                          android:layout_height="wrap_content"
+
+                                          android:layout_marginTop="8dp"
+                                          android:layout_marginBottom="8dp"
+                                          android:layout_marginStart="8dp"
+
+
+                                          android:layout_marginEnd="8dp"/>
+
+
+
+                              </LinearLayout>
+
+
+
+                          </androidx.cardview.widget.CardView>
+
+                          <View android:layout_width="match_parent"
+                                android:layout_height="@dimen/_8sdp"/>
+
+                      </LinearLayout>
+
+
+                      <LinearLayout android:layout_width="match_parent"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginTop="16dp"
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content">
+
+
+                          <!--<TextView android:layout_width="wrap_content"-->
+                                    <!--android:id="@+id/titleTv"-->
+                                    <!--android:textSize="@dimen/_14ssp"-->
+                                    <!--tools:text="hello hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
+<!--fffffffffffffffffff-->
+<!--zzzzzz"-->
+                                    <!--android:textColor="#303030"-->
+                                    <!--android:layout_height="wrap_content"-->
+                          <!--/>-->
+                          <ImageView android:layout_width="wrap_content"
+
+                                     android:id="@+id/share_btn"
+                                     android:layout_gravity="center"
+                                     app:srcCompat="@drawable/ic_share"
+                                     android:layout_height="wrap_content"
+                          />
+                      </LinearLayout>
+
+
+                      <TextView android:layout_width="match_parent"
+                                android:id="@+id/descriptionTv"
+                                android:textSize="@dimen/_13ssp"
+                                android:textColor="#616161"
+                                tools:text="الاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهليالاهلي "
+                                android:lineSpacingExtra="3dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"/>
+                      <View android:layout_width="match_parent"
+                            android:id="@+id/divider11"
+                            android:background="#EEEEEE"
+                            android:layout_height="1dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="16dp"/>
+                      <LinearLayout android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_height="wrap_content">
+
+
+                          <TextView
+                                  android:layout_marginStart="8dp"
+                                  android:layout_width="match_parent"
+                                    android:text="@string/comments"
+                                    android:fontFamily="@font/helvetica_reg"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/_14ssp"
+                                    android:textColor="#3C3C3C"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView8"
+
+                          />
+
+
+
+                          <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                  android:id="@+id/add_btn"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:src="@drawable/ic_add_comment"
+                                  android:layout_marginStart="8dp"
+                                  android:layout_weight="0"
+                                  app:fabSize="mini"
+                                  app:borderWidth="1dp"
+                                  app:elevation="2dp"
+                                  app:pressedTranslationZ="12dp"
+                                  app:rippleColor="@android:color/transparent"/>
+
+                      </LinearLayout>
+
+
+
+                      <ProgressBar android:layout_width="wrap_content"
+                                   android:id="@+id/progres"
+                                   android:layout_gravity="center"
+                                   android:layout_height="wrap_content"/>
+
+                      <androidx.recyclerview.widget.RecyclerView
+                              app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                              android:id="@+id/commentsRv"
+                              android:layout_width="match_parent"
+                              android:padding="@dimen/_8sdp"
+                              android:clipToPadding="false"
+                              android:focusable="false"
+                              android:nestedScrollingEnabled="false"
+                              android:layout_height="match_parent"
+                              app:layout_constraintBottom_toBottomOf="parent"
+                              app:layout_constraintEnd_toEndOf="parent"
+                              app:layout_constraintStart_toStartOf="parent"
+                              tools:listitem="@layout/item_comment"/>
+
+
+
+
+
+                  </LinearLayout>
+              </androidx.core.widget.NestedScrollView>
+
+
+      </LinearLayout>
+
+
+</layout>

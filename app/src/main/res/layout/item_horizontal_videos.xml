@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+<androidx.cardview.widget.CardView
+                                   android:layout_width="230dp"
+                                   android:layout_height="136dp"
+                                   app:cardElevation="1dp"
+                                   app:cardCornerRadius="8dp"
+                                   android:layout_marginTop="8dp"
+                                   app:cardUseCompatPadding="true"
+                                   android:layout_marginStart="8dp"
+                                   android:layout_marginEnd="8dp"
+                                   android:layout_marginBottom="2dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView android:layout_width="230dp"
+                   android:layout_height="136dp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   android:id="@+id/categoryIv"/>
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/frame_trans"
+                android:background="@color/colorBlackLightTransparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                app:layout_constraintHorizontal_bias="0.0"
+                tools:text="111000000000000000000000000000000000000000000000000000000000000000"
+                app:layout_constrainedWidth="true"
+                android:textColor="@color/white"
+                android:maxLines="2"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:id="@+id/glorious_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/frame_trans"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/imageView5"
+                android:layout_marginStart="8dp"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   android:src="@drawable/play_video"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintStart_toStartOf="parent"
+                   android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+                   app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/imageView5"/>
+
+
+        <!--<TextView-->
+                <!--android:id="@+id/glorious_number"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:textSize="30sp"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent"-->
+                <!--tools:text="123" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

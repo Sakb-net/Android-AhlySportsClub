@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="java.lang.Integer" />
+        <variable name="matchData"
+                  type="com.dev.alahlifc.al_ahlysportsclub.models.mMatches.Data" />
+    </data>
+    <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                                       android:layout_margin="@dimen/_8sdp"
+                                       android:layout_height="wrap_content"
+                                       app:cardCornerRadius="8dp"
+                                       app:cardElevation="2dp"
+    >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+
+
+            <TextView android:layout_width="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                      tools:text="dawry vvv0000000000000000000000000000000000000000000000"
+                      android:textSize="14sp"
+                      android:maxLines="1"
+                      android:ellipsize="end"
+                      android:textColor="#008640"
+                      app:layout_constraintTop_toTopOf="parent"
+                      android:text="@{matchData.name}"
+                      app:layout_constrainedWidth="true"
+
+                      android:layout_marginTop="8dp"
+                      android:layout_height="wrap_content"
+
+                      android:layout_marginEnd="8dp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:layout_marginStart="8dp"
+                      android:id="@+id/textView15"/>
+
+            <TextView
+                android:fontFamily="@font/helvetica_reg"
+                    android:text="@{matchData.date}"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    tools:text="السبت, 22 يناير 2018"
+                    android:textSize="14sp"
+                    android:textColor="#303030"
+
+                    android:id="@+id/date"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@id/textView15"/>
+
+
+
+            <TextView android:layout_width="wrap_content"
+                      tools:text="21:00"
+                      app:layout_constraintTop_toBottomOf="@id/date"
+                      android:text="@{matchData.time}"
+                      android:textSize="14sp"
+                      android:textColor="#919191"
+
+                      android:layout_marginEnd="8dp"
+                      android:layout_marginStart="8dp"
+                      android:layout_height="wrap_content"
+
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:id="@+id/textView150"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                android:fontFamily="@font/helvetica_reg"
+                          android:id="@+id/linear"
+                          app:layout_constraintTop_toBottomOf="@+id/date"
+                          android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
+                          android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                          android:layout_marginEnd="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                          android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+
+                    <ImageView
+                            android:layout_gravity="center"
+
+                            app:srcTeamImage="@{matchData.firstImage}"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            tools:src="@drawable/logo"
+                            android:id="@+id/team1_iv"
+                            android:layout_marginTop="16dp"
+
+                    />
+
+                    <TextView
+                            android:layout_gravity="center"
+                        android:fontFamily="@font/helvetica_reg"
+                            android:gravity="center"
+                            android:text="@{matchData.firstTeam}"
+                            app:layout_constrainedWidth="true"
+                            tools:text="النادي"
+                            android:textColor="@color/selected_tab_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/team1_tv"
+                            android:layout_marginTop="8dp"
+
+                    />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="0"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                    <TextView
+                        android:fontFamily="@font/helvetica_reg"
+                            android:textColor="#303030"
+                            android:text="VS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView7"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@+id/team1_iv"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintEnd_toStartOf="@+id/team2_iv"
+                            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/textView15"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                            android:layout_gravity="center"
+                            app:srcTeamImage="@{matchData.secondImage}"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:src="@drawable/logo"
+                            android:id="@+id/team2_iv"
+                            android:layout_marginTop="16dp"
+                    />
+
+
+                    <TextView
+                        android:fontFamily="@font/helvetica_reg"
+                            android:layout_gravity="center"
+                            tools:text="االهلال "
+                            android:text="@{matchData.secondTeam}"
+                            tools:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/team2_tv"
+                            android:textColor="@color/selected_tab_text"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

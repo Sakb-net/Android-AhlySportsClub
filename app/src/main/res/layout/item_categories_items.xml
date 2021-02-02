@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="java.lang.Double" />
+        <variable name="categoriesItemsData"
+                  type="com.dev.alahlifc.al_ahlysportsclub.models.mItemsInCategory.Product" />
+    </data>
+<androidx.cardview.widget.CardView
+        android:foreground="?selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp"
+>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:orientation="vertical">
+
+
+
+    <ImageView
+            android:background="#33999999"
+            app:srcNormalproduct="@{categoriesItemsData.image}"
+            android:id="@+id/categoryIv"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+   <!-- <View android:layout_width="0dp"
+          android:layout_height="200dp"
+          android:background="@color/colorBlackTransparent"
+          app:layout_constraintEnd_toEndOf="@+id/categoryIv"
+          app:layout_constraintStart_toStartOf="@+id/categoryIv"
+          app:layout_constraintBottom_toBottomOf="@+id/categoryIv"
+          app:layout_constraintTop_toTopOf="@+id/categoryIv"
+          android:id="@+id/view7"/>-->
+
+
+    <TextView
+            android:maxLines="1"
+            android:text="@{categoriesItemsData.name}"
+            android:gravity="center"
+            tools:text="T-shirts"
+            android:id="@+id/categoryTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:ellipsize="end"
+            android:textColor="#1D1D1D"
+            android:textSize="16sp"
+
+            app:layout_constraintTop_toBottomOf="@+id/categoryIv"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+  <TextView
+          android:maxLines="1"
+           android:paddingBottom="4dp"
+          android:paddingTop="4dp"
+            android:text="@{Double.toString(categoriesItemsData.price) + @string/rs}"
+            android:gravity="center"
+            tools:text="T-shirts"
+            android:id="@+id/cat_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textColor="#008640"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/categoryTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>

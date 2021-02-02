@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable name="newsData"
+              type="com.dev.alahlifc.al_ahlysportsclub.models.mNews.Data" />
+</data>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+                                       android:layout_margin="@dimen/_8sdp"
+                                       android:layout_height="wrap_content"
+                                   app:cardCornerRadius="6dp"
+                                   app:cardPreventCornerOverlap="false"
+                                   app:cardUseCompatPadding="true"
+                                       app:cardElevation="2dp"
+    >
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+
+        <ImageView
+                app:srcVideoImage="@{newsData.image}"
+                android:id="@+id/newsIv"
+                tools:src="#BCBCBC"
+                android:layout_width="match_parent"
+                   android:layout_height="157dp"
+                   android:scaleType="centerCrop"
+                 />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  tools:text="منذ 2 أسبوع"
+
+                  android:fontFamily="@font/helvetica_reg"
+                  android:text="@{newsData.createdAt}"
+                  app:layout_constrainedWidth="true"
+                  android:textSize="12sp"
+                  android:gravity="start|center"
+                  android:layout_gravity="start|center"
+                  android:textColor="#818181"
+                  android:background="@drawable/rec_strok_gray_light_rounded"
+                  android:layout_marginStart="8dp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  android:layout_marginTop="20dp"
+
+                  android:id="@+id/createdAtTv"
+                  android:layout_marginEnd="8dp"
+                />
+
+        <TextView
+                android:fontFamily="@font/helvetica_reg"
+                android:layout_width="match_parent"
+                  android:textSize="15sp"
+                  android:textStyle="bold"
+                  android:textColor="#144E30"
+                android:text="@{newsData.name}"
+                  tools:text="مجلس إدارة النادي الأهلي يعقد اجتماعه الأول"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/name"
+                android:layout_marginEnd="8dp"/>
+
+        <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                  android:textSize="14sp"
+                android:ellipsize="end"
+                android:text="@{newsData.description}"
+                android:maxLines="3"
+                android:fontFamily="@font/helvetica_reg"
+                  android:textColor="#707070"
+                  tools:text="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق"
+                  android:layout_height="wrap_content"
+
+                  android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+
+
+                android:layout_marginEnd="8dp"/>
+
+
+
+    </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

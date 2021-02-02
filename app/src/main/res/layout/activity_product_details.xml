@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="java.lang.Double" />
+        <import type="java.lang.Integer" />
+        <import type="java.lang.Float" />
+        <variable name="product"
+                  type="com.dev.alahlifc.al_ahlysportsclub.models.mProductSingle.Data" />
+    </data>
+
+<LinearLayout android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+        <androidx.viewpager2.widget.ViewPager2
+                    android:background="@color/white"
+                    android:id="@+id/viewpager_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+            />
+        <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    app:tabBackground="@drawable/about_club_indicator_selector_prod"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                   />
+
+        <ImageView android:layout_width="wrap_content"
+                   android:id="@+id/back"
+                   android:padding="16dp"
+                   android:clickable="true"
+                   android:focusable="true"
+                   android:background="?selectableItemBackground"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="24dp"
+                   android:src="@drawable/icon_auto_mirrored_back"
+                   android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+<ScrollView android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content">
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@{product.name}"
+              android:layout_marginTop="12dp"
+              android:fontFamily="@font/helvetica_reg"
+              tools:text="تي شيرت النادي"
+              android:textSize="18sp"
+              android:textColor="#1A1A1A"
+              android:layout_marginStart="24dp"
+              android:layout_marginEnd="24dp"
+    />
+
+    <TextView
+            android:text="@{Double.toString(product.price) + @string/rs}"
+            tools:text="@string/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_reg"
+            android:textStyle="bold"
+            android:textColor="#008640"
+            android:textSize="20sp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+           />
+
+    <View android:layout_width="match_parent"
+          android:layout_height="0.8dp"
+          android:layout_marginTop="8dp"
+    android:background="@color/dividerColor"
+    />
+
+    <LinearLayout
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <RatingBar
+                android:layout_gravity="center"
+                android:rating="@{product.starRate}"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:theme="@style/RatingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <View android:layout_width="0dp"
+              android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+        <TextView
+                android:drawableEnd="@drawable/ic_back_arrow"
+                android:text="@{Integer.toString(product.rate) + @string/star_rate}"
+                tools:text="@string/price"
+                android:drawablePadding="4dp"
+
+                android:id="@+id/rates"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                android:textColor="#07015B"
+                android:textSize="13sp"
+        />
+
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="0.8dp"
+          android:layout_marginTop="8dp"
+          android:background="@color/dividerColor"
+    />
+
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/desc"
+              android:layout_marginTop="8dp"
+              android:fontFamily="@font/helvetica_reg"
+              android:textSize="18sp"
+              android:textStyle="bold"
+              android:textColor="@color/colorPrimary"
+              android:layout_marginStart="24dp"
+              android:layout_marginEnd="24dp"
+    />
+
+    <TextView
+            android:text="@{product.description}"
+            android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:text="@string/desc"
+              android:layout_marginTop="8dp"
+              android:fontFamily="@font/helvetica_reg"
+              android:textSize="16sp"
+              android:textColor="#444444"
+              android:layout_marginStart="24dp"
+              android:layout_marginEnd="24dp"
+    />
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/more_info"
+              android:layout_marginTop="8dp"
+              android:fontFamily="@font/helvetica_reg"
+              android:textSize="18sp"
+              android:textStyle="bold"
+              android:textColor="@color/colorPrimary"
+              android:layout_marginStart="24dp"
+              android:layout_marginEnd="24dp"
+    />
+
+    <LinearLayout
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <TextView
+
+                android:text="@string/country_of_manufacture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                android:textColor="#444444"
+                android:textStyle="bold"
+                android:textSize="13sp"
+        />
+
+        <TextView
+                android:text="@{product.cityMade}"
+                tools:text="saudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                android:textColor="#444444"
+                android:layout_marginStart="16dp"
+                android:textSize="13sp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <TextView
+
+                android:text="@string/colors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                android:textColor="#444444"
+                android:textStyle="bold"
+                android:textSize="13sp"
+        />
+
+        <TextView
+                app:arr="@{product.color}"
+                tools:text="saudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                android:textColor="#444444"
+                android:layout_marginStart="16dp"
+                android:textSize="13sp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <TextView
+
+                android:text="@string/sizes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                android:textColor="#444444"
+                android:textStyle="bold"
+                android:textSize="13sp"
+        />
+
+        <TextView
+                app:arr="@{product.weight}"
+                tools:text="saudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                android:textColor="#444444"
+                android:layout_marginStart="16dp"
+                android:textSize="13sp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <TextView
+
+                android:text="@string/available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                android:textColor="#444444"
+                android:textStyle="bold"
+                android:textSize="13sp"
+        />
+
+        <TextView
+                android:text="@{Integer.toString(product.numberProd)}"
+                tools:text="saudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_reg"
+                android:textColor="#444444"
+                android:layout_marginStart="16dp"
+                android:textSize="13sp"
+        />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+    <TextView
+            android:layout_weight="0"
+
+            android:id="@+id/positiveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textSize="16sp"
+            android:background="#008640"
+            android:gravity="center"
+            android:fontFamily="@font/helvetica_reg"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/white"
+
+    />
+</LinearLayout>
+
+
+</layout>

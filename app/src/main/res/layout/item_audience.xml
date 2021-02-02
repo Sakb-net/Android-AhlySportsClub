@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="java.lang.Integer" />
+        <variable name="audienceData"
+                  type="com.dev.alahlifc.al_ahlysportsclub.models.mAudience.Anwser" />
+    </data>
+<LinearLayout
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_marginTop="12dp"
+              android:layout_marginBottom="12dp"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+
+
+
+    <TextView
+            android:text="@{audienceData.name}"
+            android:gravity="start|center"
+            tools:text="T-shirts"
+            android:id="@+id/nametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textColor="#444444"
+            android:textSize="14sp"
+          />
+
+
+        <TextView
+
+                android:text="@{Integer.toString(audienceData.rate) + @string/moduls}"
+                android:gravity="start|center"
+                tools:text="20 %"
+                android:layout_marginStart="8dp"
+                android:id="@+id/ratetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+        />
+
+
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/progress_bar_background"
+    >
+
+        <ProgressBar
+                android:progress="@{audienceData.rate}"
+                android:id="@+id/progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_margin="1dp"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/curved_progress_bar"
+        />
+
+    </FrameLayout>
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView android:layout_width="0dp"
+                   android:contentDescription="@string/bacground"
+                   android:layout_height="0dp"
+                   android:src="@color/placeholder_bg"
+                   app:layout_constraintEnd_toEndOf="parent"
+
+                   android:id="@+id/backgroudIv"
+                   android:scaleType="centerCrop"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/sub_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+            <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:id="@+id/frame_trans"-->
+            <!--android:background="@color/colorBlackTransparent"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"/>-->
+
+
+            <!--<Button-->
+            <!--tools:text="إحجز تذكرتك الآن"-->
+            <!--style="@style/button_green"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:paddingEnd="24dp"-->
+            <!--android:paddingStart="24dp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:id="@+id/buy_"-->
+            <!--android:textSize="16sp"-->
+            <!--android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"-->
+            <!--android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"/>-->
+
+            <TextView
+                    android:fontFamily="@font/helvetica_reg"
+                    android:text="@string/next_match_"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    android:id="@+id/title_tv_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    tools:src="@drawable/logo"
+                    android:id="@+id/team1_iv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/title_tv_"
+
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/textView7"/>
+
+            <TextView
+                    tools:text="001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001"
+                    app:layout_constrainedWidth="true"
+                    android:fontFamily="@font/helvetica_reg"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:id="@+id/team1_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/team1_iv"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView7"/>
+
+
+            <TextView
+                    android:textColor="@color/white"
+                    android:text="VS"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/team1_iv"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/title_tv_"
+
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/team2_iv"
+                    android:layout_marginEnd="8dp"/>
+
+
+
+
+
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    tools:src="@drawable/logo"
+                    android:id="@+id/team2_iv"
+
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView7"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/title_tv_"
+
+                    app:layout_constraintHorizontal_bias="0.5"
+            />
+
+
+            <TextView
+                    app:layout_constrainedWidth="true"
+                    tools:text="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/team2_tv"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/helvetica_reg"
+                    app:layout_constraintTop_toBottomOf="@+id/team2_iv"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView7"
+                    android:layout_marginStart="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+                app:layout_constrainedWidth="true"
+                android:gravity="center"
+                android:textColor="#FFDE00"
+                tools:text="22:00000 , 22 يناير "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_tv"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/sub_constraint"
+                android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+                android:fontFamily="@font/helvetica_reg"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="@string/book_ticket"
+                style="@style/button_green"
+                android:layout_width="wrap_content"
+                android:paddingEnd="24dp"
+                android:paddingStart="24dp"
+                android:textColor="@color/white"
+                android:id="@+id/buy_"
+                android:visibility="invisible"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/date_tv"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_gravity="center"
+                  android:fontFamily="@font/helvetica_reg"
+                  android:textColor="@color/white"
+                  android:textSize="18sp"
+                  android:id="@+id/title_prod"
+                  android:visibility="gone"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintBottom_toTopOf="@id/buy_"
+                  android:text="@string/we_have_products"
+
+                  android:gravity="center"
+                  android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

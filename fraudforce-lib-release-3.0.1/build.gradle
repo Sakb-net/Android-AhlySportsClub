@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('fraudforce-lib-release-3.0.1.aar'))

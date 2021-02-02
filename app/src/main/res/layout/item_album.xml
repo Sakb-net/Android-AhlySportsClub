@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable name="albumData"
+              type="com.dev.alahlifc.al_ahlysportsclub.models.mAlbum.Data" />
+</data>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+                                       android:layout_margin="@dimen/_8sdp"
+                                       android:layout_height="wrap_content"
+                                   app:cardCornerRadius="6dp"
+                                       app:cardElevation="2dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+
+        <ImageView
+                app:srcVideoImage="@{albumData.image}"
+                android:id="@+id/newsIv"
+                android:layout_width="0dp"
+                   android:layout_height="170dp"
+                android:scaleType="centerCrop"
+                   android:adjustViewBounds="true"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+                android:background="@color/colorBlackLightTransparent"                android:layout_width="0dp"
+              android:layout_height="0dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+        <!--<ImageView android:layout_width="40dp"-->
+                   <!--android:layout_height="40dp"-->
+                   <!--android:src="@drawable/play_video"-->
+                   <!--app:layout_constraintEnd_toEndOf="parent"-->
+                   <!--android:layout_marginEnd="8dp"-->
+                   <!--app:layout_constraintStart_toStartOf="parent"-->
+                   <!--android:layout_marginStart="8dp"-->
+                   <!--app:layout_constraintTop_toTopOf="parent"-->
+                   <!--android:id="@+id/imageView2" android:layout_marginBottom="8dp"-->
+                   <!--app:layout_constraintBottom_toTopOf="@+id/name" android:layout_marginTop="8dp"/>-->
+
+
+        <TextView
+
+                android:layout_width="0dp"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/helvetica_reg"
+                android:text="@{albumData.name}"
+                tools:text="مجلس إدارة النادي الأهلي يعقد اجتماعه الأول"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+
+                app:layout_constraintBottom_toTopOf="@+id/dateTv"
+        />
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  tools:text="مايو 2019"
+                  app:layout_constrainedWidth="true"
+                  android:textSize="14sp"
+                  android:textColor="#FFFFFF"
+                  android:text="@{albumData.date}"
+                  android:fontFamily="@font/helvetica_reg"
+                  android:id="@+id/dateTv"
+                  android:layout_marginBottom="8dp"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  android:layout_marginEnd="8dp"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginStart="8dp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintHorizontal_bias="0.0"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,2 @@
+include ':app' ,':jiaozivideoplayer', ':oppwa.mobile-2.38.0'
+//':fraudforce-lib-release-3.0.1', ':alipaySdk-15.5.9', ':oppwa.mobile-2.38.0'

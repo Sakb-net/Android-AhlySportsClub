@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="championsData"
+                  type="com.dev.alahlifc.al_ahlysportsclub.models.mChampions.DataX" />
+    </data>
+<androidx.cardview.widget.CardView
+
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp"
+>
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+
+
+
+    <ImageView
+            app:srcCustomImageChamp="@{championsData.iconImage}"
+            android:id="@+id/categoryIv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    <TextView
+            android:fontFamily="@font/helvetica_reg"
+            android:text="@{championsData.name}"
+            android:gravity="center"
+            android:background="@color/colorAccent"
+
+            android:layout_gravity="bottom|center"
+
+           android:padding="12dp"
+            tools:text="T-0000000"
+            android:id="@+id/categoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"/>
+
+</LinearLayout>
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
+</layout>

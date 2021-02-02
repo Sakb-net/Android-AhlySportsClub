@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="commentData"
+                  type="com.dev.alahlifc.al_ahlysportsclub.models.mComments.Data" />
+    </data>
+    <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                                       android:layout_margin="@dimen/_8sdp"
+                                       android:layout_height="wrap_content"
+                                       app:cardCornerRadius="6dp"
+                                       app:cardElevation="2dp"
+    >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      tools:text="مايو 2019"
+                      app:layout_constrainedWidth="true"
+                      android:textSize="14sp"
+                      android:textColor="#343434"
+                      android:text="@{commentData.date}"
+                      android:fontFamily="@font/helvetica_reg"
+                      android:id="@+id/dateTv"
+
+                      app:layout_constraintHorizontal_bias="1"
+                      app:layout_constraintStart_toEndOf="@+id/name"
+                      android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                      app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+                      app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <TextView
+
+                    app:layout_constrainedWidth="true"
+                    android:layout_width="0dp"
+                    android:textSize="14sp"
+                    android:textColor="#343434"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/helvetica_reg"
+                    android:text="@{commentData.parentUserName}"
+                    tools:text="مجلس إدارة النادي الأهلي يعقد اجتماعه الأول"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"/>
+
+
+            <RatingBar
+                    android:layout_gravity="center"
+                    android:rating="@{commentData.starRate}"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:theme="@style/RatingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/ratingBar"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/name"/>
+
+
+            <TextView
+                    android:layout_marginBottom="8dp"
+                    android:textAlignment="viewStart"
+                    app:layout_constrainedWidth="true"
+                    android:layout_width="0dp"
+                    android:textSize="12sp"
+                    android:textColor="#343434"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/helvetica_reg"
+                    android:text="@{commentData.content}"
+
+                    tools:text="cccccccc\nfffffffffffff\ngggggggggggggggggggggggggggggggggggggggggggggg\nffff\nbfbf\nbfbfbfbf\nbfbfbfbfb\nbfbfbfbfbfbf"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/desc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingBar" android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/del"/>
+
+
+            <ImageView android:layout_width="wrap_content"
+                       android:id="@+id/del"
+                       app:srcCompat="@drawable/ic_delete_black_24dp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:padding="1dp"
+                       android:background="?selectableItemBackground"
+                       android:layout_height="wrap_content"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       android:layout_marginStart="8dp"
+                       android:layout_marginEnd="8dp"
+                       app:layout_constraintHorizontal_bias="1"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="@+id/desc"
+                       app:layout_constraintBottom_toBottomOf="@+id/desc" android:layout_marginBottom="8dp"
+                       android:layout_marginTop="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

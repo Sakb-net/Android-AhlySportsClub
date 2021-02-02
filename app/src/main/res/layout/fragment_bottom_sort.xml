@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/dialog_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                    android:elevation="2dp"
+
+                    android:id="@+id/positiveBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:textSize="16sp"
+                    android:background="#008640"
+                    android:gravity="center"
+
+                    android:text="@string/sortby"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+          <!--  <TextView
+                    android:elevation="4dp"
+
+                    android:id="@+id/newest"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:textSize="16sp"
+
+                    android:gravity="center"
+
+                    android:text="@string/newest"
+                    android:textColor="#3C3C3C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/positiveBtn"/>
+
+            <View android:layout_width="0dp"
+                  android:layout_height="1dp"
+                  android:id="@+id/view_divider_2"
+                  android:background="@color/dividerColor"
+                  app:layout_constraintTop_toBottomOf="@+id/newest"
+
+                  app:layout_constraintStart_toStartOf="parent"
+            />-->
+
+
+            <TextView
+                    android:elevation="4dp"
+
+                    android:id="@+id/best_selling"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:textSize="16sp"
+
+                    android:gravity="center"
+
+                    android:text="@string/best_selling"
+                    android:textColor="#3C3C3C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/positiveBtn"/>
+
+            <View android:layout_width="0dp"
+                  android:layout_height="1dp"
+                  android:id="@+id/view_divider_3"
+                  android:background="@color/dividerColor"
+                  app:layout_constraintTop_toBottomOf="@+id/best_selling"
+
+                  app:layout_constraintStart_toStartOf="parent"
+            />
+
+            <TextView
+                    android:elevation="4dp"
+
+                    android:id="@+id/from_to_to_low"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:textSize="16sp"
+
+                    android:gravity="center"
+
+                    android:text="@string/price_is_from_top_to_bottom"
+                    android:textColor="#3C3C3C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_divider_3"/>
+
+            <View android:layout_width="0dp"
+                  android:layout_height="1dp"
+                  android:id="@+id/view_divider_4"
+                  android:background="@color/dividerColor"
+                  app:layout_constraintTop_toBottomOf="@+id/from_to_to_low"
+
+                  app:layout_constraintStart_toStartOf="parent"
+            />
+
+            <TextView
+                    android:elevation="4dp"
+
+                    android:id="@+id/from_botom_to_top"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:textSize="16sp"
+
+                    android:gravity="center"
+
+                    android:text="@string/price_is_from_bottom_to_top"
+                    android:textColor="#3C3C3C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_divider_4"/>
+
+            <View android:layout_width="0dp"
+                  android:layout_height="1dp"
+                  android:id="@+id/view_divider_5"
+                  android:background="@color/dividerColor"
+                  app:layout_constraintTop_toBottomOf="@+id/from_botom_to_top"
+
+                  app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
